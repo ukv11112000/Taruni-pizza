@@ -1,0 +1,72 @@
+<app-navbar [data]="navbar"></app-navbar>
+
+<div class="row">
+    <div class="col" id=col1>
+<div class="body">
+
+    <div class="container"  id="main container"*ngFor="let pizzaOrder of pizzaOrders">
+    <div class="row" id="main">
+       
+            <div class=" col-lg-3 col-md-4 col-sm-5"  style="width: 20%; float:left">
+                <div class="img-thumbnail">
+                    <img src={{pizzaOrder.pizza.url}} class="img"/>
+                </div>
+            </div>
+            
+            <div class=" col-lg-8 col-md-4 col-sm-5">
+                <br>
+                <span id="name"><strong>{{pizzaOrder.pizza.name}}</strong></span>
+              
+                <div class="quantity" id="quantity">
+                <b> Quantity : </b>
+                    <button type="button"(click)="minus(pizzaOrder)" ><i class="fa fa-minus"></i></button>
+                    <input type="text" value={{pizzaOrder.quantity}} size="5">
+                    <button type="button"(click)="plus(pizzaOrder)"><i class="fa fa-plus"></i></button>
+                </div> <br>
+                <b>Size : </b>
+                <select ngModel (ngModelChange)="size(pizzaOrder,$event)" [value]="pizzaOrder.size"  >
+                   
+                    <option disabled selected value> {{pizzaOrder.size}} </option>
+                   
+                    <option >medium</option> 
+                    <option >large</option>
+                    <option >small</option>
+                </select>
+               
+                <div id="cost">
+                   <b>Total : </b> {{pizzaOrder.totalCost}}
+                </div>
+                
+            </div>
+            <div class="col">
+                <div class="col"></div>
+                <div class="row">
+                <span id="trans"><b>Mode:</b> {{pizzaOrder.transactionMode}}</span><br>
+                <br>
+                <span> <b>Date:</b> {{pizzaOrder.orderDate}}</span>
+                <div class="row-md"> 
+                    <button type="button" class="btn btn-success btn-sm"  (click)="updatePO(pizzaOrder)">Update</button>
+                    <button type="button" class="btn btn-danger btn-sm" (click)="deletePO(pizzaOrder)">Delete</button>
+                </div>
+                
+            </div>
+            
+           
+        </div>
+    </div>    
+    
+</div>
+
+
+</div>
+</div>
+<div class="col" id="sticky" >
+<div class="card  col" id="sticky1" style="max-width: 18rem;">
+    <div class="card-header"><b>OrderDetails : </b></div> <br>
+    <div class="card-body">
+      <h5 class="card-title">No of Pizzas: {{pizzaOrders.length}} </h5> <br>
+      <h5 class="card-title">TotalCost: {{totalcost| number:'1.2-2'}} </h5> <br>
+      <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
+    </div>
+</div>
+</div>

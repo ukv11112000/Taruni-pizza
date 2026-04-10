@@ -1,0 +1,25 @@
+.image {
+    background-image: url("../../assets/photos/bckgrd.jpg");
+    image-resolution: 200%;
+    opacity: 100%;
+    background-size:cover;
+  }
+  .card {
+    border-style: solid;
+    border-width: 1px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    width: 400px;
+    min-width: 600px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    align-self: center;
+    vertical-align: middle;
+  }
+  
+  .br {
+    line-height: 50px;
+  }
+  

@@ -1,0 +1,39 @@
+
+
+
+    
+   
+
+        <mat-card class="card" style="background-image:url('https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-blue-geometric-flattened-taobao-e-commerce-coupon-background-image_262564.jpg')">
+        
+          <mat-card-title class="title">Coupon :</mat-card-title>
+          <form [formGroup]="service.form" (submit)="onSubmit()">
+            <input type="hidden" formControlName="coupanid" >
+            <mat-form-field class="w-100" appearance="outline">
+              <input type="text" matInput placeholder="Name" formControlName="coupanName">
+              <mat-error *ngIf="data.coupanName.errors?.required">Name is required.</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="w-100" appearance="outline">
+              <input type="number" matInput placeholder="Discount %" formControlName="coupanType">
+              <mat-error  *ngIf="data.coupanType.errors?.required">Discount % is required.</mat-error>
+              <mat-error  *ngIf="data.coupanType.errors?.pattern">Enter the valid value.</mat-error>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="w-100" appearance="outline">
+              <input type="text" matInput placeholder="Description" formControlName="coupaanDescription">
+              <mat-error  *ngIf="data.coupaanDescription.errors?.required">Description is required.</mat-error>
+              <mat-error *ngIf="data.coupaanDescription.hasError('maxlength')">Maximum length is 200 letters </mat-error>
+              <mat-error *ngIf="data.coupaanDescription.hasError('minlength')">Minimum length is 10 letters </mat-error>
+            </mat-form-field>
+            <div class="form-group mt-4">
+              <button mat-raised-button color="primary" [disabled]="service.form.invalid">Submit</button>
+              
+            </div><br>
+
+          </form>
+         
+        </mat-card>
+      
+
+

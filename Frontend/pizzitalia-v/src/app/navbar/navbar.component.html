@@ -1,0 +1,81 @@
+
+<nav class="navbar navbar-expand-lg navbar-inverse" *ngIf="data">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    
+      <a class="navbar-brand" href="/">Pizzitalia</a>
+      
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      
+     
+      <ul class="nav navbar-nav navbar-right">
+     
+        <li class="dropdown">
+          
+          <a href="#" class="dropdown-toggle" style="color:white"  *ngIf="service.loggedIn()" data-toggle="dropdown" role="button">{{displayName()}}<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+           
+            <li  ><a (click)="editForm()">Edit profile</a></li>
+            <li><a href="/profile">Profile</a></li>
+          
+          </ul>
+          <li><a style="color: #fff" *ngIf="service.loggedIn()" (click)="service.logoutUser()"><span class="glyphicon glyphicon-log-out"   ></span> Logout</a></li>
+          <li><a style="color:#fff" href="/pizzaorder"> <span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
+         
+        <ul class="nav navbar-nav navbar-right">
+          <li><a style="color: #fff" href="/register" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-off"></span> Sign Up</a></li>
+          <li><a style="color: #fff"href="/login" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+
+
+
+
+  
+
+ 
+
+  
+<nav class="nav__cont">
+  
+  <ul class="nav">
+    <li class="nav__items ">
+     <span class=" glyphicon glyphicon-home" style="font-size: 25px; padding-left: 6px;"></span>
+      <a href="/">Home </a>
+    </li>
+    
+    <li class="nav__items ">
+      <span ><i class="fas fa-pizza-slice" style="font-size: 25px; padding-left: 6px;"></i></span>
+      <a href="/pizza">Pizzas</a>
+    </li>
+      
+    <li class="nav__items ">
+      <span class=" glyphicon glyphicon-list"  style="font-size: 25px; padding-left: 6px;"></span>
+     <a href="/orderhistory">Orders</a>
+     
+    </li>
+    <li class="nav__items" *ngIf=permission>
+      <span ><i class="fas fa-users"   style="font-size: 25px; padding-left: 6px;" ></i></span>
+     <a href="/customers">Customers</a>
+     
+     
+    </li>
+      
+   
+  </ul>
+</nav>
+
+  

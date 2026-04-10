@@ -1,0 +1,34 @@
+<app-navbar [data]="navbar"></app-navbar>
+
+<div class="container">
+   
+    <div  class="row text-center grid-list" >
+        
+      <div class=" col-lg-3 col-md-4 col-sm-5 " *ngFor="let customer of customers ">
+        <div class="card " id="card" >
+          <div class="imgBx">
+            <img src="data:image/png;base64,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">
+           
+             </div>
+          <div class="contentBx">
+            <h2>{{customer.name}}</h2>
+          <br>
+          <br>
+          <br>
+          <br>
+            <div class="col grid-list">
+  
+                <h3>Email:{{customer.email}}</h3>
+                <h3>Phone:{{customer.phone}}</h3>
+                <h3>Address:{{customer.address}}</h3>
+                <!--<h3>Role:{{customer.roles}}</h3>-->                 
+            </div>
+          
+            <button (click)="delete(customer)">Delete</button>
+  
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    

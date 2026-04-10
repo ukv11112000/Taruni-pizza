@@ -1,0 +1,54 @@
+<div class="image" >
+
+    <div style="height: 62px; display: block;"></div>
+    <mat-card class="card">
+      <mat-card-content>
+        <mat-card-title class="title">EDIT HERE</mat-card-title>
+        <br>
+      <form [formGroup]="_service.form" (submit)="onSubmit()">
+      
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Full Name" formControlName="name" > 
+          <mat-error *ngIf="_service.dataa.name.errors?.required">First Name is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="_service.dataa.email.errors?.required">Email is required</mat-error>
+          <mat-error *ngIf="_service.dataa.email.errors?.email">Enter a valid email address</mat-error>
+        </mat-form-field>
+        <br>
+        
+        <br>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Phone No" formControlName="phone" >
+          <mat-error *ngIf="_service.dataa.phone.errors?.required">Phone no is required</mat-error>
+          <mat-error *ngIf="_service.dataa.phone.errors?.pattern">Enter a valid phone number</mat-error>
+        </mat-form-field>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Address" formControlName="address" >
+          <mat-error *ngIf="_service.dataa.address.errors?.required">Address is required</mat-error>
+          
+        </mat-form-field>
+       
+        <br>
+   
+          
+        
+         <br>
+         <button mat-raised-button color="primary">SAVE</button>
+    
+      </form>
+    </mat-card-content>
+    <br>
+    </mat-card>
+ 
+    <div style="width:300px ;display: block;"></div>
+         
+
+  </div>
+
+  
+
+
+  

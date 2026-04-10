@@ -1,0 +1,35 @@
+
+
+
+  <div class="image">
+    
+      <div style="height: 170px; display: block;"></div>
+  
+          <mat-card class="card">
+            <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+            <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div>
+           
+            <mat-card-title class="title">LOGIN</mat-card-title>
+            <form [formGroup]="service.form" (submit)="onSubmit()">
+              <mat-form-field class="w-100" appearance="outline">
+                <input type="text" matInput placeholder="Username" formControlName="username">
+                <mat-error *ngIf="data.username.errors?.required">Username is required.</mat-error>
+              </mat-form-field>
+              <br>
+              <mat-form-field class="w-100" appearance="outline">
+                <input type="password" matInput placeholder="Password" formControlName="password">
+                <mat-error  *ngIf="data.password.errors?.required">Password is required.</mat-error>
+              </mat-form-field>
+              <div class="form-group mt-4">
+                <button mat-raised-button color="primary" [disabled]="service.form.invalid">Login</button>
+                <a [routerLink]="['/register']" class="ml-2" mat-button color="primary">Register</a>
+              </div><br>
+  
+            </form>
+           
+          </mat-card>
+          <div style="height: 390px; display: block;"></div>
+         
+  </div>
+  
+

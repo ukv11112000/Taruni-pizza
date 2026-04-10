@@ -1,0 +1,82 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-inverse">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display 
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Pizzitalia</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a href="/pizza/veg">Veg <span class="sr-only"></span></a></li>
+          <li><a href="/pizza/nonveg">Non-veg <span class="sr-only" ></span></a></li>
+        
+        </ul>
+        <ul>
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <input type="text" class="form-control mr-sm-20" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+          <button  mat-raised-button (click)="onCreate()">
+              <mat-icon>add</mat-icon>Create
+          </button>
+        </form>
+      </ul>
+        <ul class="nav navbar-nav navbar-right">
+       
+          <li class="dropdown">
+            
+            <a href="#" class="dropdown-toggle" style="color:white"  *ngIf="service.loggedIn()" data-toggle="dropdown" role="button">{{displayName()}}<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+             
+              <li><a (click)="editForm()">Edit profile</a></li>
+              <li><a href="/profile">Profile</a></li>
+            
+            </ul>
+            <li><a style="color: #fff" *ngIf="service.loggedIn()" (click)="service.logoutUser()"><span class="glyphicon glyphicon-log-out"   ></span> Logout</a></li>
+            <li><a style="color:#fff" href="/pizzaorder"> <span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
+           
+          <ul class="nav navbar-nav navbar-right">
+            <li><a style="color: #fff" href="/register" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a style="color: #fff"href="/login" *ngIf="!service.loggedIn()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+   -->
+
+ 
+
+
+<nav class="nav__cont">
+  <ul class="nav">
+    <li class="nav__items ">
+     <span class=" glyphicon glyphicon-home" style="font-size: 25px;"></span>
+      <a href="/">Home</a>
+    </li>
+    
+    <li class="nav__items ">
+      <span class=" glyphicon glyphicon-dashboard"  style="font-size: 25px;"></span>
+      <a href="/pizza">Pizzas</a>
+    </li>
+      
+    <li class="nav__items ">
+      <span class=" glyphicon glyphicon-list"  style="font-size: 25px;"></span>
+     <a href="/orderhistory">Orders</a>
+    </li>
+      
+   
+  </ul>
+</nav>
+
+  

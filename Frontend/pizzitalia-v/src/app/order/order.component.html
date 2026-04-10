@@ -1,0 +1,39 @@
+<app-navbar [data]="navbar"></app-navbar>
+<div class="container" id="Abb"  *ngFor="let order of orders">
+    <div class=" col-lg-3 col-md-4 col-sm-5 card"  *ngFor="let pizzaord of order.pizzaorder">
+        <div class="img-thumbnail" style="width: 27rem;">
+            <div class="container1 card-body">
+                <img src={{pizzaord.pizza.url}} height=150px width=250px>
+                
+            </div>
+            
+            <div class="caption">
+                <h4>{{pizzaord.pizza.name}}</h4>
+                
+                <p>
+                    {{pizzaord.pizza.description}}
+                </p>
+                <div class="components">
+                <span>
+                    <div>
+                        Size:{{pizzaord.size}}
+                    </div>
+                    <div>
+                        Quantity:{{pizzaord.quantity}}
+                    </div>
+                    <div>
+                        Total:{{pizzaord.totalCost}}
+                    </div>
+                </span>
+                
+               
+                
+            </div>
+            </div>   
+            
+            
+</div>
+
+    </div>
+OrderTotal:{{order.orderTotal}}
+</div>

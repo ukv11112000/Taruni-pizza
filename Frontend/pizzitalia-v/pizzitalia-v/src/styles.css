@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+div.container{
+
+    text-align: center;
+}
+
+.fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+  form.normal-form{
+    margin: 10px;
+}
+
+.controles-container{
+    width: 100%;
+    padding: 5%;  
+     
+}
+
+.controles-container > * {
+    width: 100%;
+    }
+
+.add-bottom-padding{
+    padding-bottom: 10px;
+}
+   
+mat-radio-group mat-radio-button{
+    margin-left: 5px;
+}
+
+.button-row button{
+    margin: 5px;
+}
+
+snack-bar-container.success{
+    background-color: #5cb85c;
+    font-weight: bold;
+    
+}
+
+snack-bar-container.error{
+  background-color: #e61010;
+  font-weight: bold;
+  
+}
+
+
+
+
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.press-title a:hover { background-color: transparent; text-decoration: none; }

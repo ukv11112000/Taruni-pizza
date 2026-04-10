@@ -1,0 +1,181 @@
+
+.navbar.navbar-default{
+    background:transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.nav a:hover {
+    border-bottom: 1px solid white;
+    
+  }
+  
+  a.navbar-brand{
+    padding-left: 20px;
+    font-family:'Courier New', Courier, monospace ;
+    font-weight:bolder;
+    font-size: 25px;
+    
+  }
+
+  .row{
+    padding-left: 60px;
+  }
+  
+  div.row.ng-star-inserted{
+   max-width: 750px;
+  }
+  
+  div.alert:hover{
+      outline: 1px solid green;
+  }
+  h3{
+      
+    text-align: center;
+    margin-top: 5px;
+      
+  }
+
+  h1{
+    margin-bottom: 1px;
+    width:50px;
+  }
+
+  .top-left{
+    position:absolute;
+    top:2px;
+    left:5px;
+  }
+
+.thumbnail .caption-full{
+  padding:9px;
+}
+.img{
+  height:50px;
+  width:50px;
+}
+
+span.description{
+  
+  margin-bottom: 25px;
+  padding-top: 20px;
+ 
+}
+.quantity{
+  float:left;
+  padding-left:13px;
+  margin-bottom: 0px;
+  
+  
+  
+}
+.btn.btn-success{
+  
+  margin-top:6px;
+  margin-left:50px;
+  margin-right: 20px;
+  float:right
+}
+.components{
+  margin: 0px;;
+}
+
+.trash{
+  float:right; 
+  margin-top: 15px;
+  margin-right:3px;
+  color:red;  
+  background-color: 
+  white; border:none
+}
+
+.edit{
+  float:right; 
+  margin-top: 15px;
+  margin-right:0px;
+  color:red;  
+  background-color: 
+  white; border:none
+}
+
+.bottom-left{
+  position:absolute;
+  bottom:8px;
+  left:16px;
+}
+
+.container1{
+  position:relative;
+  text-align:center;
+  color:white;
+  font-weight: 900;
+  font-size: 25px;
+  width:500px
+}
+.heading{
+  
+  padding-left: 105px;
+  font-weight:900;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+div.img-thumbnail{
+  width:660px;
+}
+b{
+  margin-bottom: 20px;
+  font-size:20px;
+
+}
+
+.pos{
+  padding-bottom: 5px;
+  padding-top: 8px;
+  text-align: center;
+}
+.container2{ 
+  position:fixed;
+  width:700px;
+ }
+
+ .card{
+  padding-left: 125px;
+ }
+
+
+body {
+  background: #F0E5E1 ;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.panel-heading {
+  background-color: rgb(175, 225, 175);
+}
+
+label {
+    width: 100%;
+}
+
+.card-input-element {
+    display: none;
+}
+
+.card-input {
+    margin: 10px;
+    padding: 00px;
+}
+
+.card-input:hover {
+    cursor: pointer;
+}
+
+.card-input-element:checked + .card-input {
+     box-shadow: 0 0 1px 1px #2ecc71;
+ }
+

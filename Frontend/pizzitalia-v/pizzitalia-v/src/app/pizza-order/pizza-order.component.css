@@ -1,0 +1,60 @@
+
+.navbar.navbar-default{
+  background:transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.nav a:hover {
+border-bottom: 1px solid white;
+}
+.img{
+height:200px;
+width:400px;
+}
+.btn.btn-success{
+margin: 5px;
+}
+.btn.btn-danger{
+margin:5px;
+}
+
+#main{
+margin: 1.66%;
+border-style: groove;
+}
+body{
+font-size: 15px;
+width: 1150px;
+
+}
+
+.row-md{
+padding: 2px;
+}
+strong{
+padding: 5px;
+}
+#quantity{
+font-size: 15px;
+}
+
+#sticky{
+position: fixed;
+left:1150px;
+padding:10px;
+font-size: 30px;
+}
+#sticky1{
+height:300px;
+font-size: 20px;
+}
+.card-title{
+font-size: 20px;
+}
+snack-bar-container.success{
+background-color:red;
+font-weight: bold;
+
+}

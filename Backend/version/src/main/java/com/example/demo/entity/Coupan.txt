@@ -1,0 +1,6 @@
+{
+"coupanName":"GET10%CB",
+"coupanType":"10",
+"coupaanDescription":"Description",
+"coupanPizzaid":1,
+}

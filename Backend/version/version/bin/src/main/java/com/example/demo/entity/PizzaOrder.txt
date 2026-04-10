@@ -1,0 +1,64 @@
+{
+"transactionMode":"cash",
+"quantity":10,
+"size":"medium",
+"totalCost":0,
+
+ "pizza":{
+        "id": 1,
+        "name": "cheese",
+        "type": "veg",
+        "description": "cheese",
+        "price": 399,
+        "url": "hfkjkfhfd.jpg",
+        "coupan": []
+    }
+ "coupan":{
+        "coupanid": 4,
+        "coupanName": "DIS40",
+        "coupanType": 40,
+        "coupaanDescription": "DIS40",
+        "coupanPizzaid": 4
+    }
+ "order":{
+    "orderid": 1,
+    "orderType": "online",
+    "orderDescription": "cheese burst pizza",
+    "orderCustomerId": 3
+  }
+
+
+}
+
+{
+"pord":{
+  "bookingOrderId": 0,
+  "coupan": {
+   		"coupanid": 4,
+        "coupanName": "DIS40",
+        "coupanType": 40,
+        "coupaanDescription": "DIS40",
+        "coupanPizzaid": 4
+  },
+  "order": {
+     "orderid": 1,
+    "orderType": "online",
+    "orderDescription": "cheese burst pizza",
+    "orderCustomerId": 3
+  },
+  "orderDate": "2021-07-22",
+  "pizza": {
+    
+     "id": 1,
+        "name": "cheese",
+        "type": "veg",
+        "description": "cheese",
+        "price": 399,
+        "url": "hfkjkfhfd.jpg",
+  },
+  "quantity": 10,
+  "size": "medium",
+  "totalCost": 0,
+  "transactionMode": "online"
+}
+}

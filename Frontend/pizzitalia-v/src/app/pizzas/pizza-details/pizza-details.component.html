@@ -1,0 +1,60 @@
+
+<div class="container2">
+
+    <div class="row"  *ngIf="details">
+        <div class="img-thumbnail" >
+            <div class="container1 card-body">
+                <img src={{details.url}} height=220px width=650px>
+                <div class="bottom-left">{{ details.price | currency:'USD' }}</div>
+                <div class="top-left" *ngIf="details.type==='1'"><img src="/assets/photos/veg.png" alt="non-veg" hight="20px" width="20px"></div>
+                <div class="top-left" *ngIf="details.type==='2'"><img src="/assets/photos/nonveg.jpg" alt="veg" hight="20px" width="20px"></div>
+            </div>
+
+                <div class="pos">
+                    <b>{{details.name}}</b>
+                    <button class="btn btn-success" (click)="placeOrder(details)">Add to Cart</button>
+                </div>
+
+                <span class="description">
+                    {{details.description}}
+                </span>
+                <div class="components">
+
+
+                <button *ngIf="permission"(click)="deletePizza(details.id)" class="trash"><span class="glyphicon glyphicon-trash" ></span></button>
+                <button  *ngIf="permission" (click)="editPizza(details)" class="edit"><span class="glyphicon glyphicon-edit" ></span></button>
+
+            </div>
+        </div>
+        <div> <button class="btn btn-success" (click)="addCoupon()">Add Coupon</button></div>
+
+    </div>
+
+<div class="roww">
+   <div class="container" >
+
+     <div class="roww">
+         <div class="col-md-4 col-lg-5 col-sm-4" *ngFor="let x of coupan">
+           <label>
+             <input type="radio" name="product" class="card-input-element" (click)="getcoupon(x.coupanid)" />
+
+               <div class="panel panel-default card-input alert alert-danger alert-coupon">
+                 <div class="panel-heading ">{{x.coupanName}}
+                 <div ><button *ngIf="permission"(click)="deleteCoupon(x.coupanid)" class="trash"><span class="glyphicon glyphicon-trash" ></span></button></div>
+                 <button  *ngIf="permission" (click)="editCoupon(x)" class="edit"><span class="glyphicon glyphicon-edit" ></span></button>
+                </div>
+                 <div class="panel-body">
+                    {{x.coupaanDescription}}
+                 </div>
+               </div>
+
+           </label>
+
+         </div>
+     </div>
+   </div>
+</div>
+
+</div>
+
+

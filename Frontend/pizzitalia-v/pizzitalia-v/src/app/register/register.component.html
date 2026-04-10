@@ -1,0 +1,71 @@
+<div class="image" >
+
+    <div style="height: 62px; display: block;"></div>
+    <mat-card class="card">
+      <mat-card-content>
+        <mat-card-title class="title">{{title}}</mat-card-title>
+        <br>
+      <form [formGroup]="_service.registerForm" (ngSubmit)="onSubmit()" >
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Full Name" formControlName="name" > 
+          <mat-error *ngIf="data.name.errors?.required">First Name is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="data.email.errors?.required">Email is required</mat-error>
+          <mat-error *ngIf="data.email.errors?.email">Enter a valid email address</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Username" formControlName="username" >
+          <mat-error *ngIf="data.username.errors?.required">Username is required</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="w-100" appearance="outline">
+          <input type="text" matInput placeholder="Phone No" formControlName="phone" >
+          <mat-error *ngIf="data.phone.errors?.required">Phone no is required</mat-error>
+          <mat-error *ngIf="data.phone.errors?.pattern">Enter a valid phone number</mat-error>
+        </mat-form-field>
+        <br>
+   
+          <mat-form-field class="w-100" appearance="outline">
+            <input type="password" matInput placeholder="Password" formControlName="password">
+            <mat-error *ngIf="data.password.errors?.required">Password is required</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="w-100" appearance="outline">
+            <input type="password" matInput placeholder="Confirm Password" formControlName="confirmPassword">
+            <mat-error *ngIf="_service.registerForm.controls['confirmPassword'].errors?.PasswordValidation">Passwords does not match</mat-error>
+            <mat-error *ngIf="data.confirmPassword.errors?.required">Password is required</mat-error>
+          </mat-form-field>
+          <br>
+
+          <mat-form-field class="w-100" appearance="outline">
+            <input type="text" matInput placeholder="Address" formControlName="address" >
+            <mat-error *ngIf="_service.data.address.errors?.required">Address required</mat-error>
+            
+          </mat-form-field>
+        
+        
+         <br>
+         <button mat-raised-button color="primary">Register</button>
+         <a [routerLink]="['/login']" class="ml-2" mat-button color="primary">LOGIN</a>
+         
+  
+   
+    
+      </form>
+    </mat-card-content>
+    <br>
+    </mat-card>
+ 
+    <div style="height:300px; display: block;"></div>
+         
+
+  </div>
+
+  
+
+
+  
